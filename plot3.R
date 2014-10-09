@@ -17,7 +17,7 @@ for (i in 3:9) {D[,i]<-gsub("\\?","NA",D[,i])}
 # Convert the data's field to Numeric class
 for (i in 3:9) {D[,i]<-as.numeric(D[,i])}
 # Create plot in png file
-png(filename="plot3.png", width=480, height=480)
+png(filename="plot3.png", width=480, height=480, bg = "transparent")
 plot(D$DateTime, D$Sub_metering_1, ylab="Energy sub metering", xlab="", type="l")
 lines(D$DateTime, D$Sub_metering_2, col="Red")
 lines(D$DateTime, D$Sub_metering_3, col="Blue")
